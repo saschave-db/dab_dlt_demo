@@ -28,7 +28,7 @@ jobs:
       - run: databricks bundle deploy
         env:
           DATABRICKS_TOKEN: ${{ secrets.E2_DEMO_WEST_TOKEN }}
-          DATABRICKS_BUNDLE_ENV: qa
+          DATABRICKS_BUNDLE_ENV: dev
 
   pipeline_update:
     name: "Run pipeline update"
@@ -57,7 +57,7 @@ jobs:
           databricks bundle run fe_medium_metrics --refresh-all 2>&1 | tee output.log
         env:
           DATABRICKS_TOKEN: ${{ secrets.E2_DEMO_WEST_TOKEN }}
-          DATABRICKS_BUNDLE_ENV: qa
+          DATABRICKS_BUNDLE_ENV: dev
 #       - shell: bash
 #         if: always()
 #         name: Emit annotations
