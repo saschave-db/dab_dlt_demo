@@ -22,6 +22,7 @@ targets:
   # (See Databricks docs on CI/CD at https://docs.databricks.com/dev-tools/bundles/index.html.)
   #
   staging:
+    mode: developmentx
     workspace:
       host: https://e2-demo-west.cloud.databricks.com
 
