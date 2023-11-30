@@ -54,7 +54,7 @@ jobs:
         name: Run pipeline update
         run: |
           set -o pipefail
-          databricks bundle run dab_dlt_demo_job --refresh-all 2>&1 | tee output.log
+          databricks bundle run dab_dlt_demo_job
         env:
           DATABRICKS_TOKEN: ${{ secrets.E2_DEMO_WEST_TOKEN }}
           DATABRICKS_BUNDLE_ENV: dev
@@ -67,3 +67,5 @@ jobs:
 #           PYTHONPATH=$PWD:$PWD/.github/support python3 .github/support/emit_annotations.py $pipeline_id $update_id
 #         env:
 #           DATABRICKS_TOKEN: ${{ secrets.E2_DEMO_WEST_TOKEN }}
+
+#--refresh-all 2>&1 | tee output.log
