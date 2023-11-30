@@ -8,5 +8,17 @@ resources:
         - notebook:
             path: ../src/dlt_pipeline.ipynb
 
+      clusters:
+        - cluster:
+          label: default
+          policy_id: E06216CAA0000360
+          autoscale:
+            min_workers: 1
+            max_workers: 2
+
+        - cluster:
+          label: maintenance
+          policy_id: E06216CAA0000360
+
       configuration:
         bundle.sourcePath: /Workspace/${workspace.file_path}/src
