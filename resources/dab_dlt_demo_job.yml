@@ -2,7 +2,7 @@
 resources:
   jobs:
     dab_dlt_demo_job:
-      name: dab_dlt_demo_job
+      name: ${bundle.environment}_dab_dlt_demo_job
 
       schedule:
         quartz_cron_expression: "44 37 8 * * ?"
